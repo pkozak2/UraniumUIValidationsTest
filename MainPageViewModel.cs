@@ -9,5 +9,14 @@ namespace UraniumUITestValidations
         [Required]
         [EmailAddress]
         private string email = string.Empty;
+
+        private string _password = string.Empty;
+
+        [Required]
+        public string Password
+        {
+            get => _password;
+            set { SetProperty(ref _password, value); }
+            }
+        }
     }
-}

@@ -11,17 +11,6 @@
 
     <ScrollView>
         <VerticalStackLayout Padding="30,0" Spacing="25">
-            <Image
-                Aspect="AspectFit"
-                HeightRequest="185"
-                SemanticProperties.Description="dot net bot in a hovercraft number nine"
-                Source="dotnet_bot.png" />
-
-            <Label
-                SemanticProperties.HeadingLevel="Level1"
-                Style="{StaticResource Headline}"
-                Text="Hello, World!" />
-
             <Label
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I"
                 SemanticProperties.HeadingLevel="Level2"
@@ -34,10 +23,17 @@
                 HorizontalOptions="Fill"
                 SemanticProperties.Hint="Counts the number of times you click"
                 Text="Click me" />
-            <input:FormView>
+            <input:FormView Spacing="10">
+                <Label Text="Communitytoolkit.MVVM" />
                 <material:TextField Title="Login" Text="{Binding Email}">
                     <material:TextField.Behaviors>
                         <v:DataAnnotationsBehavior Binding="{Binding Email}" />
+                    </material:TextField.Behaviors>
+                </material:TextField>
+                <Label Text="Default binding" />
+                <material:TextField Title="Password" Text="{Binding Password}">
+                    <material:TextField.Behaviors>
+                        <v:DataAnnotationsBehavior Binding="{Binding Password}" />
                     </material:TextField.Behaviors>
                 </material:TextField>
             </input:FormView>
